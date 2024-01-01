@@ -34,7 +34,7 @@ document.getElementById("signin").addEventListener("click", function() {
       const user = userCredential.user;
       console.log(user);
     //   alert(user.email+" Login successfully!!!");
-      window.location.replace('Home.html')
+      window.location.replace('../HOME/indexAdmin.html')
     //   document.getElementById('logout').style.display = 'block';
       // ...
     })
