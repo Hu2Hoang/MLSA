@@ -72,7 +72,7 @@ document.getElementById('addRecordButton').addEventListener('click', function() 
 		    alert(error);
 		  });		  
     alert("Thêm thành công!!!");
-    window.location.replace('.//Admin/Page2 - Copy.html')
+    window.location.replace('../Admin/Page2 - Copy.html')
  
     // Refresh the table
    
