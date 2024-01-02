@@ -115,36 +115,18 @@
                       </div>
                       <div class="u-container-style u-list-item u-repeater-item">
                         <div class="u-container-layout u-similar-container u-container-layout-5">
-                      
-                          <p class="u-text u-text-default u-text-4"><span class="u-file-icon u-icon u-text-custom-color-2"><img src="images/3767091-33531b7c.png" alt=""></span>&nbsp;Quản lý tài nguyên
-                          </p>
-                        
+                            <p class="u-text u-text-default u-text-4" onclick="toggleDropdown(event, 'dropdown')">
+                                <span class="u-file-icon u-icon u-text-custom-color-2">
+                                    <img src="images/3767091-33531b7c.png" alt="">
+                                </span>&nbsp;Quản lý tài nguyên
+                            </p>
+                            <div id="dropdown" class="dropdown-content">
+                                <a href="Project.html">Dự án</a>
+                                <a href="Document.html">Tài liệu</a>
+                                <a href="Noti.html">Thông báo</a>
+                            </div>
                         </div>
-                      </div>
-                      <div class="u-container-style u-list-item u-repeater-item">
-                        <div class="u-container-layout u-similar-container u-container-layout-5">
-                      
-                          <p class="u-text u-text-default u-text-4"><a href="Project.html"><span class="u-file-icon u-icon u-text-custom-color-2"></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Dự án
-                          </a></p>
-                        
-                        </div>
-                      </div>
-                      <div class="u-container-style u-list-item u-repeater-item">
-                        <div class="u-container-layout u-similar-container u-container-layout-5">
-                      
-                          <p class="u-text u-text-default u-text-4"><a href="Document.html"><span class="u-file-icon u-icon u-text-custom-color-2"></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Tài liệu
-                          </a></p>
-                        
-                        </div>
-                      </div>
-                      <div class="u-container-style u-list-item u-repeater-item">
-                        <div class="u-container-layout u-similar-container u-container-layout-5">
-                      
-                          <p class="u-text u-text-default u-text-4"><a href="Noti.html"><span class="u-file-icon u-icon u-text-custom-color-2"></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Thông báo
-                          </a></p>
-                        
-                        </div>
-                      </div>
+                    </div>
                       <div class="u-container-style u-list-item u-repeater-item">
                         <div class="u-container-layout u-similar-container u-container-layout-6">
                           <p class="u-text u-text-default u-text-5"><span class="u-file-icon u-icon u-text-custom-color-2"><img src="images/10235325-4dc4bfb1.png" alt=""></span>&nbsp;Quản lý cộng đồng
@@ -422,5 +404,10 @@ window.onload = function() {
     // Call the SelectAllData function with an empty search input to display all records
     SelectAllData('');
 };
+function toggleDropdown(event, dropdownId) {
+    event.preventDefault();
+    var dropdown = document.getElementById(dropdownId);
+    dropdown.style.display = dropdown.style.display === 'none' ? 'block' : 'none';
+}
 </script>
 </html>
