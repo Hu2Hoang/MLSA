@@ -228,4 +228,28 @@
       </div></footer>
   
   
-</body></html>
+</body>
+<script>
+  function toggleDropdown(event, dropdownId) {
+      event.preventDefault();
+      var dropdown = document.getElementById(dropdownId);
+      dropdown.style.display = dropdown.style.display === 'none' ? 'block' : 'none';
+  
+      var closeDropdown = function(event) {
+          var isClickInside = dropdown.contains(event.target);
+          if (!isClickInside) {
+              // The click was outside the dropdown, close it.
+              dropdown.style.display = 'none';
+              // Remove the event listener
+              document.removeEventListener('click', closeDropdown);
+          }
+      };
+  
+      if (isDisplayed) {
+          // Add the event listener if the dropdown is opened
+          document.addEventListener('click', closeDropdown);
+      }
+  }
+  
+  </script>
+</html>
